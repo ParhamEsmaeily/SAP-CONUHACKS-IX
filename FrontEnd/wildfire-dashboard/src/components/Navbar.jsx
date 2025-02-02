@@ -6,7 +6,7 @@ function Navbar({ darkMode, setDarkMode }) {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-            WildFire Monitor
+            FireFind
           </Link>
           <div className="flex items-center space-x-6">
             <Link 

@@ -14,7 +14,9 @@ function Analysis() {
     const fetchData = async () => {
       try {
         // Fetch from public folder using the public URL
-        const supposedData = await fetchJSON('/model1_supposedTrue.json');
+        const supposedData = await fetchJSON('/model1_logical.json');
+        // Expected solution
+        const expectedData = await fetchJSON('/model1_supposedTrue.json');
 
         // Transform the data for current solution view
         setCurrentSolution({
@@ -29,8 +31,6 @@ function Analysis() {
           }
         });
 
-        // Expected solution
-        const expectedData = await fetchJSON('/model1_logical.json');
         setPreviousSolution({
           "Number of fires addressed": expectedData.summary.total_fires_handled,
           "Number of fires delayed": expectedData.summary.total_fires_missed,
@@ -188,7 +188,7 @@ function Analysis() {
           />
           <ComparisonMetric 
             title="Cost Efficiency"
-            value={`${((previousSolution["Total operational costs"] - currentSolution["Total operational costs"]) / previousSolution["Total operational costs"] * 100).toFixed(1)}%`}
+            value={`${((currentSolution["Total operational costs"] / previousSolution["Total operational costs"]) * 100).toFixed(1)}%`}
             trend="up"
           />
         </div>
