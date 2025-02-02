@@ -6,18 +6,58 @@ import Loading from '../components/Loading';
 import Error from '../components/Error';
 import { parseCSV } from '../utils/csvParser';
 
-// Fix for default marker icon
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+// Create a custom red marker icon
+const redIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
+
+// Create different icons for different severity levels
+const severityIcons = {
+    high: new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    }),
+    medium: new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    }),
+    low: new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    }),
+    unknown: new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    })
+};
 
 function Prediction() {
     const [markers, setMarkers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [mapCenter, setMapCenter] = useState([45.5017, -73.5673]); // Montreal coordinates as default
+    const [mapZoom, setMapZoom] = useState(13);
 
     const handleFileUpload = async (event) => {
         const file = event.target.files[0];
@@ -30,8 +70,19 @@ function Prediction() {
                     .filter(row => row.latitude && row.longitude)
                     .map(row => ({
                         position: [parseFloat(row.latitude), parseFloat(row.longitude)],
-                        severity: row.severity || 'unknown'
+                        severity: row.severity?.toLowerCase() || 'unknown'
                     }));
+                
+                // Calculate center and zoom if there are markers
+                if (validMarkers.length > 0) {
+                    const lats = validMarkers.map(m => m.position[0]);
+                    const lngs = validMarkers.map(m => m.position[1]);
+                    const centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
+                    const centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
+                    setMapCenter([centerLat, centerLng]);
+                    setMapZoom(10); // Adjust zoom level as needed
+                }
+                
                 setMarkers(validMarkers);
             } catch (err) {
                 setError('Error parsing CSV file. Please ensure it contains latitude and longitude columns.');
@@ -65,8 +116,8 @@ function Prediction() {
                 {error && <Error message={error} />}
                 <div className="h-[600px] rounded-lg overflow-hidden">
                     <MapContainer
-                        center={[45.5017, -73.5673]} // Montreal coordinates as default
-                        zoom={13}
+                        center={mapCenter}
+                        zoom={mapZoom}
                         className="h-full w-full"
                     >
                         <TileLayer
@@ -74,13 +125,48 @@ function Prediction() {
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         />
                         {markers.map((marker, idx) => (
-                            <Marker key={idx} position={marker.position}>
+                            <Marker 
+                                key={idx} 
+                                position={marker.position}
+                                icon={severityIcons[marker.severity] || severityIcons.unknown}
+                            >
                                 <Popup>
-                                    Severity: {marker.severity}
+                                    <div className="text-center">
+                                        <h3 className="font-bold capitalize">
+                                            {marker.severity} Severity
+                                        </h3>
+                                        <p className="text-sm">
+                                            Lat: {marker.position[0].toFixed(4)}<br/>
+                                            Long: {marker.position[1].toFixed(4)}
+                                        </p>
+                                    </div>
                                 </Popup>
                             </Marker>
                         ))}
                     </MapContainer>
+                </div>
+                
+                {/* Legend */}
+                <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h3 className="font-bold mb-2 text-gray-800 dark:text-white">Legend</h3>
+                    <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                        <div className="flex items-center">
+                            <div className="w-4 h-4 bg-red-500 rounded-full mr-2"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">High Severity</span>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="w-4 h-4 bg-orange-500 rounded-full mr-2"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">Medium Severity</span>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="w-4 h-4 bg-yellow-500 rounded-full mr-2"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">Low Severity</span>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="w-4 h-4 bg-gray-500 rounded-full mr-2"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">Unknown</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
