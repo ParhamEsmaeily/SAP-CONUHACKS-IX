@@ -29,18 +29,48 @@ function Analysis() {
           }
         });
 
-        // Use the same data but slightly modified for previous solution
+        // Expected solution
+        const expectedData = await fetchJSON('/model1_supposedTrue.json');
         setPreviousSolution({
-          "Number of fires addressed": supposedData.summary.total_fires_handled - 4,
-          "Number of fires delayed": supposedData.summary.total_fires_missed + 4,
-          "Total operational costs": supposedData.costs.operational - 20000,
-          "Estimated damage costs": supposedData.costs.damage + 100000,
+          "Number of fires addressed": expectedData.summary.total_fires_handled,
+          "Number of fires delayed": expectedData.summary.total_fires_missed,
+          "Total operational costs": expectedData.costs.operational,
+          "Estimated damage costs": expectedData.costs.damage,
           "Fire severity report": {
-            "low": supposedData.by_severity.handled.low - 1,
-            "medium": supposedData.by_severity.handled.medium - 2,
-            "high": supposedData.by_severity.handled.high - 1
+            "low": expectedData.by_severity.handled.low,
+            "medium": expectedData.by_severity.handled.medium,
+            "high": expectedData.by_severity.handled.high
           }
         });
+
+        // // Use the same data but slightly modified for previous solution
+        // // check if previous solution is null or not
+        // if (!copiedData) {
+        //   setPreviousSolution({
+        //     "Number of fires addressed": supposedData.summary.total_fires_handled,
+        //     "Number of fires delayed": supposedData.summary.total_fires_missed,
+        //     "Total operational costs": supposedData.costs.operational,
+        //     "Estimated damage costs": supposedData.costs.damage,
+        //     "Fire severity report": {
+        //       "low": supposedData.by_severity.handled.low,
+        //       "medium": supposedData.by_severity.handled.medium,
+        //       "high": supposedData.by_severity.handled.high
+        //     }
+        //   });
+        // }
+        // else {
+        //   setPreviousSolution({
+        //     "Number of fires addressed": copiedData.summary.total_fires_handled,
+        //     "Number of fires delayed": copiedData.summary.total_fires_missed,
+        //     "Total operational costs": copiedData.costs.operational,
+        //     "Estimated damage costs": copiedData.costs.damage,
+        //     "Fire severity report": {
+        //       "low": copiedData.by_severity.handled.low,
+        //       "medium": copiedData.by_severity.handled.medium,
+        //       "high": copiedData.by_severity.handled.high
+        //     }
+        //   });
+        // }
 
         setLoading(false);
       } catch (err) {
@@ -137,12 +167,12 @@ function Analysis() {
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <SolutionCard 
-          title="Current Solution" 
+          title="Our Solution" 
           data={currentSolution} 
           isCurrentSolution={true}
         />
         <SolutionCard 
-          title="Previous Solution" 
+          title="Expected Solution" 
           data={previousSolution} 
           isCurrentSolution={false}
         />
