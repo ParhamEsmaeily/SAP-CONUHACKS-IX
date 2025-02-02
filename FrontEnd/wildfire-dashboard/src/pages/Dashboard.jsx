@@ -9,9 +9,9 @@ import {
   Legend
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import { parseCSV } from '../utils/csvParser'; // Make sure this import is correct
+//import { parseCSV } from '../utils/csvParser';
+import { parseCSV, parseHistoricalCSV } from '../utils/csvParser';
 
-// Register ChartJS components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,24 +22,75 @@ ChartJS.register(
 );
 
 function Dashboard() {
-  const [historicalData, setHistoricalData] = useState([]);
+  const [historicalData, setHistoricalData] = useState(null);
   const [currentData, setCurrentData] = useState(null);
-  const [selectedYear, setSelectedYear] = useState('all');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [selectedYear, setSelectedYear] = useState('all');
 
-  // Add cleanup effect
+  // Load historical data
   useEffect(() => {
-    return () => {
-      // Cleanup charts when component unmounts
-      const charts = ChartJS.instances;
-      Object.keys(charts).forEach(key => {
-        charts[key].destroy();
-      });
+    const loadHistoricalData = async () => {
+      try {
+        const response = await fetch('/historical_wildfiredata.csv');
+        const csvText = await response.text();
+        const data = await parseHistoricalCSV(csvText);
+        
+        // Process the data by year
+        const yearlyData = data.reduce((acc, row) => {
+          if (!row.fire_start_time || !row.severity) return acc;
+
+          const year = new Date(row.fire_start_time).getFullYear();
+          if (!acc[year]) {
+            acc[year] = { low: 0, medium: 0, high: 0 };
+          }
+          const severity = row.severity.toLowerCase().trim();
+          if (severity in acc[year]) {
+            acc[year][severity]++;
+          }
+          return acc;
+        }, {});
+
+        // Calculate all years total
+        const allYearsTotal = Object.values(yearlyData).reduce((total, yearData) => ({
+          low: total.low + yearData.low,
+          medium: total.medium + yearData.medium,
+          high: total.high + yearData.high
+        }), { low: 0, medium: 0, high: 0 });
+
+        yearlyData.all = allYearsTotal;
+        console.log('Processed Historical Data:', yearlyData); // Debug log
+        setHistoricalData(yearlyData);
+      } catch (error) {
+        console.error('Error loading historical data:', error);
+      }
     };
+
+    loadHistoricalData();
   }, []);
 
-  // Add handleFileUpload function
+  // Process CSV data for current uploads
+  const processSeverityCounts = (data) => {
+    const severityCounts = {
+      low: 0,
+      medium: 0,
+      high: 0
+    };
+
+    data.forEach(row => {
+      if (row.severity) {
+        severityCounts[row.severity.toLowerCase()]++;
+      } else if (row.location) {
+        const severity = row.severity || row.location.split(',')[2];
+        if (severity) {
+          severityCounts[severity.toLowerCase()]++;
+        }
+      }
+    });
+
+    return severityCounts;
+  };
+
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
     if (!file) return;
@@ -52,8 +103,17 @@ function Dashboard() {
     try {
       setLoading(true);
       setError(null);
-      const data = await parseCSV(file);
-      setCurrentData(data);
+      const result = await parseCSV(file);
+      
+      const processedData = result.map(row => ({
+        timestamp: row.timestamp,
+        fire_start_time: row.fire_start_time,
+        severity: row.severity,
+        latitude: row.latitude || row.location?.split(',')[0],
+        longitude: row.longitude || row.location?.split(',')[1]
+      }));
+
+      setCurrentData(processSeverityCounts(processedData));
     } catch (err) {
       setError('Error processing file. Please try again.');
       console.error(err);
@@ -62,11 +122,11 @@ function Dashboard() {
     }
   };
 
-  const chartData = {
+  const createChartData = (data, title) => ({
     labels: ['Low', 'Medium', 'High'],
     datasets: [{
       label: 'Fire Severity',
-      data: [14, 11, 7],
+      data: data ? [data.low, data.medium, data.high] : [0, 0, 0],
       backgroundColor: [
         'rgba(34, 197, 94, 0.6)',
         'rgba(234, 179, 8, 0.6)',
@@ -79,9 +139,9 @@ function Dashboard() {
       ],
       borderWidth: 1
     }]
-  };
+  });
 
-  const options = {
+  const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -95,16 +155,19 @@ function Dashboard() {
     },
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          stepSize: 1
+        }
       }
     }
   };
 
   return (
     <div className="space-y-8">
+      {/* Historical Data Section */}
       <div className="bg-white rounded-xl shadow-lg p-6">
         <h2 className="text-2xl font-bold mb-6">Historical Wildfire Data</h2>
-        
         <div className="mb-4">
           <select 
             className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
@@ -112,17 +175,25 @@ function Dashboard() {
             onChange={(e) => setSelectedYear(e.target.value)}
           >
             <option value="all">All Years</option>
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
+            {historicalData && 
+              Object.keys(historicalData)
+                .filter(year => year !== 'all')
+                .sort((a, b) => b - a) // Sort years in descending order
+                .map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))
+            }
           </select>
         </div>
 
         <div className="h-96">
-          <Bar 
-            data={chartData} 
-            options={options} 
-            id="wildfireChart"
-          />
+          {historicalData && (
+            <Bar 
+              data={createChartData(historicalData[selectedYear])}
+              options={chartOptions}
+              id="historicalChart"
+            />
+          )}
         </div>
       </div>
 
@@ -161,8 +232,12 @@ function Dashboard() {
         )}
 
         {currentData && (
-          <div className="mt-6">
-            {/* Add visualization for current data here */}
+          <div className="mt-6 h-96">
+            <Bar 
+              data={createChartData(currentData)}
+              options={chartOptions}
+              id="currentChart"
+            />
           </div>
         )}
       </div>
