@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import Analysis from './pages/Analysis';
+import Prediction from './pages/Prediction';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/analysis" element={<Analysis />} />
+            <Route path="/prediction" element={<Prediction />} />
           </Routes>
         </main>
       </div>

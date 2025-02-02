@@ -21,6 +21,12 @@ function Navbar({ darkMode, setDarkMode }) {
             >
               Analysis
             </Link>
+            <Link 
+              to="/prediction" 
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Prediction
+            </Link>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
@@ -43,3 +49,4 @@ function Navbar({ darkMode, setDarkMode }) {
 }
 
 export default Navbar;
+
