@@ -1,0 +1,1059 @@
+{
+    "summary": {
+        "total_fires_handled": 32,
+        "total_fires_missed": 0,
+        "units_used": 32,
+        "total_units": 32
+    },
+    "by_severity": {
+    "handled": {
+        "low": 14,
+        "medium": 11,
+        "high": 7
+    },
+    "missed": {
+        "low": 0,
+        "medium": 0,
+        "high": 0
+    }
+    },
+    "costs": {
+        "operational": 11211000,
+        "damage": 0,
+        "total": 11211000
+    },
+    "schedule": [
+        {
+            "event_id": 0,
+            "fire_start_time": "2023-12-31T23:07:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2023-12-31T23:37:00",
+                    "new_available_time": "2024-01-01T03:19:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 1,
+            "fire_start_time": "2024-01-03T01:53:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-03T02:23:00",
+                    "new_available_time": "2024-01-03T06:05:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 2,
+            "fire_start_time": "2024-01-03T09:29:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-03T09:59:00",
+                    "new_available_time": "2024-01-04T22:29:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-03T09:59:00",
+                    "new_available_time": "2024-01-04T22:29:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-03T10:14:00",
+                    "new_available_time": "2024-01-04T22:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-03T10:14:00",
+                    "new_available_time": "2024-01-04T22:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-03T10:14:00",
+                    "new_available_time": "2024-01-04T22:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-01-03T10:29:00",
+                    "new_available_time": "2024-01-04T23:29:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 3,
+            "fire_start_time": "2024-01-13T02:04:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-13T02:34:00",
+                    "new_available_time": "2024-01-13T11:04:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-13T02:34:00",
+                    "new_available_time": "2024-01-13T11:04:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-13T02:49:00",
+                    "new_available_time": "2024-01-13T11:34:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 4,
+            "fire_start_time": "2024-01-18T06:54:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-18T07:24:00",
+                    "new_available_time": "2024-01-18T11:06:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 5,
+            "fire_start_time": "2024-01-29T10:11:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-29T10:41:00",
+                    "new_available_time": "2024-01-30T23:11:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-01-29T10:41:00",
+                    "new_available_time": "2024-01-30T23:11:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-29T10:56:00",
+                    "new_available_time": "2024-01-30T23:41:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-29T10:56:00",
+                    "new_available_time": "2024-01-30T23:41:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-01-29T10:56:00",
+                    "new_available_time": "2024-01-30T23:41:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-01-29T11:11:00",
+                    "new_available_time": "2024-01-31T00:11:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 6,
+            "fire_start_time": "2024-02-07T22:38:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-02-07T23:08:00",
+                    "new_available_time": "2024-02-08T02:50:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 7,
+            "fire_start_time": "2024-02-13T13:05:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-02-13T13:35:00",
+                    "new_available_time": "2024-02-13T22:05:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-02-13T13:35:00",
+                    "new_available_time": "2024-02-13T22:05:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-02-13T13:50:00",
+                    "new_available_time": "2024-02-13T22:35:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 8,
+            "fire_start_time": "2024-03-17T03:58:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-03-17T04:28:00",
+                    "new_available_time": "2024-03-17T12:58:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-03-17T04:28:00",
+                    "new_available_time": "2024-03-17T12:58:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-03-17T04:43:00",
+                    "new_available_time": "2024-03-17T13:28:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 9,
+            "fire_start_time": "2024-03-17T07:10:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-03-17T07:40:00",
+                    "new_available_time": "2024-03-17T11:22:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 10,
+            "fire_start_time": "2024-03-29T07:29:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-03-29T07:59:00",
+                    "new_available_time": "2024-03-30T20:29:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-03-29T07:59:00",
+                    "new_available_time": "2024-03-30T20:29:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-03-29T08:14:00",
+                    "new_available_time": "2024-03-30T20:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-03-29T08:14:00",
+                    "new_available_time": "2024-03-30T20:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-03-29T08:14:00",
+                    "new_available_time": "2024-03-30T20:59:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-03-29T08:29:00",
+                    "new_available_time": "2024-03-30T21:29:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 11,
+            "fire_start_time": "2024-04-04T04:37:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-04-04T05:07:00",
+                    "new_available_time": "2024-04-04T08:49:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 12,
+            "fire_start_time": "2024-04-04T19:17:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-04-04T19:47:00",
+                    "new_available_time": "2024-04-04T23:29:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 13,
+            "fire_start_time": "2024-06-06T01:22:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-06-06T01:52:00",
+                    "new_available_time": "2024-06-06T05:34:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 14,
+            "fire_start_time": "2024-06-14T22:23:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-06-14T22:53:00",
+                    "new_available_time": "2024-06-16T11:23:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-06-14T22:53:00",
+                    "new_available_time": "2024-06-16T11:23:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-06-14T23:08:00",
+                    "new_available_time": "2024-06-16T11:53:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-06-14T23:08:00",
+                    "new_available_time": "2024-06-16T11:53:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-06-14T23:08:00",
+                    "new_available_time": "2024-06-16T11:53:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-06-14T23:23:00",
+                    "new_available_time": "2024-06-16T12:23:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 15,
+            "fire_start_time": "2024-06-19T02:25:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-06-19T02:55:00",
+                    "new_available_time": "2024-06-19T11:25:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-06-19T02:55:00",
+                    "new_available_time": "2024-06-19T11:25:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-06-19T03:10:00",
+                    "new_available_time": "2024-06-19T11:55:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 16,
+            "fire_start_time": "2024-07-08T10:06:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-07-08T10:36:00",
+                    "new_available_time": "2024-07-08T19:06:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-07-08T10:36:00",
+                    "new_available_time": "2024-07-08T19:06:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-07-08T10:51:00",
+                    "new_available_time": "2024-07-08T19:36:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 17,
+            "fire_start_time": "2024-07-26T17:55:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-07-26T18:25:00",
+                    "new_available_time": "2024-07-27T02:55:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-07-26T18:25:00",
+                    "new_available_time": "2024-07-27T02:55:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-07-26T18:40:00",
+                    "new_available_time": "2024-07-27T03:25:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 18,
+            "fire_start_time": "2024-08-11T16:03:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-08-11T16:33:00",
+                    "new_available_time": "2024-08-11T20:15:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 19,
+            "fire_start_time": "2024-08-15T15:10:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-08-15T15:40:00",
+                    "new_available_time": "2024-08-17T04:10:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-08-15T15:40:00",
+                    "new_available_time": "2024-08-17T04:10:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-08-15T15:55:00",
+                    "new_available_time": "2024-08-17T04:40:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-08-15T15:55:00",
+                    "new_available_time": "2024-08-17T04:40:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-08-15T15:55:00",
+                    "new_available_time": "2024-08-17T04:40:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-08-15T16:10:00",
+                    "new_available_time": "2024-08-17T05:10:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 20,
+            "fire_start_time": "2024-08-26T03:03:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-08-26T03:33:00",
+                    "new_available_time": "2024-08-26T12:03:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-08-26T03:33:00",
+                    "new_available_time": "2024-08-26T12:03:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-08-26T03:48:00",
+                    "new_available_time": "2024-08-26T12:33:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 21,
+            "fire_start_time": "2024-09-04T07:08:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-04T07:38:00",
+                    "new_available_time": "2024-09-04T11:20:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 22,
+            "fire_start_time": "2024-09-04T22:16:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-04T22:46:00",
+                    "new_available_time": "2024-09-05T02:28:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 23,
+            "fire_start_time": "2024-09-08T12:46:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-08T13:16:00",
+                    "new_available_time": "2024-09-08T16:58:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 24,
+            "fire_start_time": "2024-09-23T18:27:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-23T18:57:00",
+                    "new_available_time": "2024-09-23T22:39:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 25,
+            "fire_start_time": "2024-09-28T17:54:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-28T18:24:00",
+                    "new_available_time": "2024-09-29T02:54:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-09-28T18:24:00",
+                    "new_available_time": "2024-09-29T02:54:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-09-28T18:39:00",
+                    "new_available_time": "2024-09-29T03:24:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 26,
+            "fire_start_time": "2024-10-16T13:23:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-10-16T13:53:00",
+                    "new_available_time": "2024-10-16T22:23:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-10-16T13:53:00",
+                    "new_available_time": "2024-10-16T22:23:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-10-16T14:08:00",
+                    "new_available_time": "2024-10-16T22:53:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 27,
+            "fire_start_time": "2024-10-27T06:44:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-10-27T07:14:00",
+                    "new_available_time": "2024-10-27T15:44:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-10-27T07:14:00",
+                    "new_available_time": "2024-10-27T15:44:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-10-27T07:29:00",
+                    "new_available_time": "2024-10-27T16:14:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 28,
+            "fire_start_time": "2024-11-14T05:40:00",
+            "severity": "medium",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-11-14T06:10:00",
+                    "new_available_time": "2024-11-14T14:40:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-11-14T06:10:00",
+                    "new_available_time": "2024-11-14T14:40:00",
+                    "unit_cost": 42500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-11-14T06:25:00",
+                    "new_available_time": "2024-11-14T15:10:00",
+                    "unit_cost": 70000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 155000.0
+        },
+        {
+            "event_id": 29,
+            "fire_start_time": "2024-11-18T19:57:00",
+            "severity": "low",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-11-18T20:27:00",
+                    "new_available_time": "2024-11-19T00:09:00",
+                    "unit_cost": 18500.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 18500.0
+        },
+        {
+            "event_id": 30,
+            "fire_start_time": "2024-12-16T19:01:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-12-16T19:31:00",
+                    "new_available_time": "2024-12-18T08:01:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-12-16T19:31:00",
+                    "new_available_time": "2024-12-18T08:01:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-16T19:46:00",
+                    "new_available_time": "2024-12-18T08:31:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-16T19:46:00",
+                    "new_available_time": "2024-12-18T08:31:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-16T19:46:00",
+                    "new_available_time": "2024-12-18T08:31:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-12-16T20:01:00",
+                    "new_available_time": "2024-12-18T09:01:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        },
+        {
+            "event_id": 31,
+            "fire_start_time": "2024-12-23T02:50:00",
+            "severity": "high",
+            "location": null,
+            "assigned_units": [
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-12-23T03:20:00",
+                    "new_available_time": "2024-12-24T15:50:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Smoke Jumpers",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 30.0,
+                    "arrival_time": "2024-12-23T03:20:00",
+                    "new_available_time": "2024-12-24T15:50:00",
+                    "unit_cost": 182500.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-23T03:35:00",
+                    "new_available_time": "2024-12-24T16:20:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 1,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-23T03:35:00",
+                    "new_available_time": "2024-12-24T16:20:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Helicopters",
+                    "unit_index": 2,
+                    "deployment_time_minutes": 45.0,
+                    "arrival_time": "2024-12-23T03:35:00",
+                    "new_available_time": "2024-12-24T16:20:00",
+                    "unit_cost": 294000.0
+                },
+                {
+                    "resource_type": "Fire Engines",
+                    "unit_index": 0,
+                    "deployment_time_minutes": 60.0,
+                    "arrival_time": "2024-12-23T03:50:00",
+                    "new_available_time": "2024-12-24T16:50:00",
+                    "unit_cost": 74000.0
+                }
+            ],
+            "status": "addressed",
+            "event_operational_cost": 1321000.0
+        }
+    ]
+}
