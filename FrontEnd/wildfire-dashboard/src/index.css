@@ -9,10 +9,18 @@ body {
   background-color: #f9fafb;
 }
 
+.dark body {
+  background-color: #111827;
+}
+
 .glass-effect {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.95);
 }
 
 .transition-all {
@@ -25,4 +33,11 @@ body {
 
 .hover-scale:hover {
   transform: scale(1.02);
+}
+
+/* Dark mode transition */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
