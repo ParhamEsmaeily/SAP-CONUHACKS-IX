@@ -30,7 +30,7 @@ function Analysis() {
         });
 
         // Expected solution
-        const expectedData = await fetchJSON('/model1_supposedTrue.json');
+        const expectedData = await fetchJSON('/model1_logical.json');
         setPreviousSolution({
           "Number of fires addressed": expectedData.summary.total_fires_handled,
           "Number of fires delayed": expectedData.summary.total_fires_missed,
