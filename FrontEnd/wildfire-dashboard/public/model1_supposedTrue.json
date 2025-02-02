@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "total_fires_handled": 28,
+    "total_fires_missed": 4,
+    "units_used": 28,
+    "total_units": 28
+  },
+  "by_severity": {
+    "handled": {
+      "low": 13,
+      "medium": 10,
+      "high": 5
+    },
+    "missed": {
+      "low": 1,
+      "medium": 1,
+      "high": 2
+    }
+  },
+  "costs": {
+    "operational": 123000,
+    "damage": 550000,
+    "total": 673000
+  },
+  "assignments": [
+    "2024-01-01: low fire at (45.7747, -73.3052) -> smoke_jumper (ID: 0)",
+    "2024-01-03: high fire at (44.5963, -72.3298) -> smoke_jumper (ID: 1)",
+    "2024-01-03: low fire at (44.5917, -72.7931) -> smoke_jumper (ID: 2)",
+    "2024-01-13: medium fire at (44.0596, -72.3365) -> smoke_jumper (ID: 3)",
+    "2024-01-18: low fire at (45.8991, -72.4297) -> smoke_jumper (ID: 4)",
+    "2024-01-29: high fire at (45.3772, -72.4617) -> fire_engine (ID: 5)",
+    "2024-02-07: low fire at (45.2376, -72.7731) -> fire_engine (ID: 6)",
+    "2024-02-13: medium fire at (45.5061, -73.5626) -> fire_engine (ID: 7)",
+    "2024-03-17: medium fire at (44.7745, -72.3508) -> fire_engine (ID: 8)",
+    "2024-03-17: low fire at (44.7544, -73.6241) -> fire_engine (ID: 9)",
+    "2024-03-29: high fire at (44.5771, -73.4983) -> fire_engine (ID: 10)",
+    "2024-04-04: low fire at (44.8483, -73.7878) -> fire_engine (ID: 11)",
+    "2024-04-04: low fire at (45.237, -72.3099) -> fire_engine (ID: 12)",
+    "2024-06-06: low fire at (45.0448, -72.7419) -> fire_engine (ID: 13)",
+    "2024-06-14: high fire at (44.5355, -73.697) -> fire_engine (ID: 14)",
+    "2024-06-19: medium fire at (45.8497, -72.3991) -> helicopter (ID: 15)",
+    "2024-07-08: medium fire at (45.4207, -73.5608) -> helicopter (ID: 16)",
+    "2024-07-26: medium fire at (45.1636, -72.7738) -> helicopter (ID: 17)",
+    "2024-08-11: low fire at (44.422, -73.8217) -> tanker_plane (ID: 18)",
+    "2024-08-15: high fire at (44.9893, -72.9472) -> tanker_plane (ID: 19)",
+    "2024-08-26: medium fire at (44.4875, -73.9055) -> ground_crew (ID: 20)",
+    "2024-09-04: low fire at (45.9548, -72.0209) -> ground_crew (ID: 21)",
+    "2024-09-04: low fire at (45.0288, -73.4796) -> ground_crew (ID: 22)",
+    "2024-09-08: low fire at (45.1302, -73.0222) -> ground_crew (ID: 23)",
+    "2024-09-23: low fire at (44.0927, -73.8376) -> ground_crew (ID: 24)",
+    "2024-09-28: medium fire at (45.532, -72.0069) -> ground_crew (ID: 25)",
+    "2024-10-16: medium fire at (44.7212, -73.1703) -> ground_crew (ID: 26)",
+    "2024-10-27: medium fire at (44.0144, -73.8114) -> ground_crew (ID: 27)"
+  ],
+  "timestamp": "2025-02-02T05:33:49.254796"
+}
