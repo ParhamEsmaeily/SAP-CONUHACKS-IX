@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SAP-CONUHACKS-IX/static/css/main.145df86c.css",
-    "main.js": "/SAP-CONUHACKS-IX/static/js/main.537d8b35.js",
+    "main.js": "/SAP-CONUHACKS-IX/static/js/main.b02b6204.js",
     "static/js/453.ca66b424.chunk.js": "/SAP-CONUHACKS-IX/static/js/453.ca66b424.chunk.js",
     "index.html": "/SAP-CONUHACKS-IX/index.html",
     "main.145df86c.css.map": "/SAP-CONUHACKS-IX/static/css/main.145df86c.css.map",
-    "main.537d8b35.js.map": "/SAP-CONUHACKS-IX/static/js/main.537d8b35.js.map",
+    "main.b02b6204.js.map": "/SAP-CONUHACKS-IX/static/js/main.b02b6204.js.map",
     "453.ca66b424.chunk.js.map": "/SAP-CONUHACKS-IX/static/js/453.ca66b424.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.145df86c.css",
-    "static/js/main.537d8b35.js"
+    "static/js/main.b02b6204.js"
   ]
 }
