@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.145df86c.css",
-    "main.js": "/static/js/main.8319a353.js",
-    "static/js/453.ca66b424.chunk.js": "/static/js/453.ca66b424.chunk.js",
-    "index.html": "/index.html",
-    "main.145df86c.css.map": "/static/css/main.145df86c.css.map",
-    "main.8319a353.js.map": "/static/js/main.8319a353.js.map",
-    "453.ca66b424.chunk.js.map": "/static/js/453.ca66b424.chunk.js.map"
+    "main.css": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/css/main.145df86c.css",
+    "main.js": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/js/main.21020cac.js",
+    "static/js/453.ca66b424.chunk.js": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/js/453.ca66b424.chunk.js",
+    "index.html": "/ParhamEsmaeily/SAP-CONUHACKS-IX/index.html",
+    "main.145df86c.css.map": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/css/main.145df86c.css.map",
+    "main.21020cac.js.map": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/js/main.21020cac.js.map",
+    "453.ca66b424.chunk.js.map": "/ParhamEsmaeily/SAP-CONUHACKS-IX/static/js/453.ca66b424.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.145df86c.css",
-    "static/js/main.8319a353.js"
+    "static/js/main.21020cac.js"
   ]
 }
